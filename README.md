@@ -1,4 +1,4 @@
-## Creative Markets - End User (Frontend)
+## BookStore - StudyCase 1
 
 - Created with: ReactJS 16.14.0
 - Author: [Uhamkaic](https://github.com/uhamkaic)
