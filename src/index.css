@@ -29,3 +29,11 @@ code {
 .card-header img {
   width: 100%;
 }
+
+.bgBlue {
+  background-color: blue !important;
+}
+
+.bgRed {
+  background-color: red !important;
+}
