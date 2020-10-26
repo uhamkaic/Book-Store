@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// import my component
+import Card from './Card';
+import Header from './Header';
+
+
+// CSS in JS
+var styles = {
+  display: 'flex',
+  flexWrap:'wrap',
+}
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <h1>TEST</h1>
+      <div className="row">
+        <Card cardTitle="Card 1" />
+        <Card cardTitle="Card 2" />
+        <Card cardTitle="Card 3" />
+      </div>
     </div>
   );
 }
+
+
+
+
 
 export default App;
