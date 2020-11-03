@@ -1,16 +1,16 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-
+// import { div } from '../../atoms';
 
 const Card = (props) => {
   return(
     <div className="card">
       <div className="cardInner">
         <div className="card-header">
-          <img src="" alt="" />
+          <img src="https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg" alt="" />
         </div>
         <div className="card-body">
-          <h1>{props.cardTitle}</h1>
+          <h2>{props.cardTitle}</h2>
         </div>
       </div>
     </div>

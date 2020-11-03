@@ -1,41 +1,45 @@
 import React from 'react';
+import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-
 // import my component
-import Card from './Card';
-import Header from './Header';
-import Button from './Button';
+import {Button, Card, BaseHeader } from './components';
 
-
-// CSS in JS
-var styles = {
-  display: 'flex',
-  flexWrap:'wrap',
-}
-
+// import my pages
+import {Home, Detail} from './pages';
 
 const Container = (props) => (
   <div className="container App">{props.children}</div>
 );
 
 
+const route = [
+  {
+    name: 'home',
+    path: '/',
+    exact: true,
+    component: Home
+  },
+  {
+    name: 'detail',
+    path: '/detail',
+    exact: true,
+    component: Detail
+  }
+]
+
+// metode dynamic routing
+// {route.map((val, index) => (
+//   <Route key={index} component={val.component} path={val.path} exact={val.exact} />
+// ))}
+
 function App() {
   return (
-    <Container>
-      <Header />
-      <h1>TEST</h1>
-        <input type="text" />
-      <Button color="#fac">Click 1</Button>
-      <Button color="red">Click 2</Button>
-      <Button color="blue">Click 3</Button>
-
-
-      <div className="row">
-        <Card cardTitle="Card 1" />
-        <Card cardTitle="Card 2" />
-        <Card cardTitle="Card 3" />
-      </div>
-    </Container>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/detail/:id" component={Detail} exact />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
